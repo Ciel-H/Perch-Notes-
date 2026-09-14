@@ -4,11 +4,11 @@ Perch Notes 是一款轻量、透明、离线的 Windows 桌面待办面板。�
 
 | 当前版本 | 更新时间 | 支持系统 |
 |---|---|---|
-| V2.55 | 2026-09-14 | Windows 10/11 x64 |
+| V2.56 | 2026-09-14 | Windows 10/11 x64 |
 
 ## 下载与运行
 
-[下载 Perch Notes V2.55 便携版](https://github.com/Ciel-H/Perch-Notes-/raw/refs/heads/main/release/Perch-Notes-v2.55-win-x64.zip)
+[下载 Perch Notes V2.56 便携版](https://github.com/Ciel-H/Perch-Notes-/raw/refs/heads/main/release/Perch-Notes-v2.56-win-x64.zip)
 
 1. 下载并解压压缩包。
 2. 双击 `栖序便签.exe`，无需安装。
