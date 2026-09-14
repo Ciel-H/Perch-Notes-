@@ -4,11 +4,11 @@ Perch Notes 是一款轻量、透明、离线的 Windows 桌面待办面板。�
 
 | 当前版本 | 更新时间 | 支持系统 |
 |---|---|---|
-| V2.39 | 2026-09-12 | Windows 10/11 x64 |
+| V2.55 | 2026-09-14 | Windows 10/11 x64 |
 
 ## 下载与运行
 
-[下载 Perch Notes V2.39 便携版](https://github.com/Ciel-H/Perch-Notes-/raw/refs/heads/main/release/Perch-Notes-v2.39-win-x64.zip)
+[下载 Perch Notes V2.55 便携版](https://github.com/Ciel-H/Perch-Notes-/raw/refs/heads/main/release/Perch-Notes-v2.55-win-x64.zip)
 
 1. 下载并解压压缩包。
 2. 双击 `栖序便签.exe`，无需安装。
@@ -19,6 +19,7 @@ Perch Notes 是一款轻量、透明、离线的 Windows 桌面待办面板。�
 
 - **三级整理**：左侧为医院、诊所等类别；类别内建立 APP、HIS 等项目；项目下直接记录事项。
 - **完成管理**：事项可勾选完成，完成后文字变淡、增加删除线并自动置底；“待完成 / 已完成”可随时切换。
+- **专注任务条**：右键事项选择“专注”，显示只含该事项的置顶任务条；主页图标可返回完整面板。
 - **浮沉模式**：“浮”让面板始终位于所有应用上方；“沉”让面板保持在其他应用后方。
 - **顶部隐藏**：点击右上角收起按钮或把面板拖到屏幕顶部，即可收成紧贴屏幕顶边的窄条；触碰顶边后点击窄条恢复。
 - **外观设置**：支持跟随系统、暗黑、亮白三种外观，透明度实时预览。
@@ -35,7 +36,7 @@ Perch Notes 是一款轻量、透明、离线的 Windows 桌面待办面板。�
 - 点击项目右侧 `＋`，直接在列表内新增事项。
 - 双击类别、项目或事项名称，可在原位置修改。
 - 点击项目右侧 `···`，可置顶、上移、下移、置底或归档。
-- 右键事项，可调整顺序或删除到回收站。
+- 右键事项，可进入专注、调整顺序或删除到回收站。
 
 ### 显示与隐藏
 
@@ -53,20 +54,4 @@ Perch Notes 是一款轻量、透明、离线的 Windows 桌面待办面板。�
 - 每日备份位于 `%LOCALAPPDATA%\Qixu\backups\`，保留最近 7 份。
 - 点击“退出”会完全结束程序；关闭显示可通过托盘再次唤出。
 
-## 分支说明
-
-- `main`：稳定版应用、版本信息与使用文档。
-- `dev`：完整源代码、内置字体资源、测试和打包脚本。
-
-## 开发与构建
-
-项目使用 .NET 10 WPF。安装 .NET 10 SDK 后执行：
-
-```powershell
-dotnet build CiciQian.slnx -c Release
-dotnet run --project tests/Qixu.Tests.csproj -c Release
-dotnet run --project qa-render/Qixu.Render.csproj -c Release
-.\build.ps1 -OutputName 栖序便签
-```
-
-发布新版只更新程序，不会创建新的业务数据目录或覆盖现有事项。内置字体的来源与授权说明位于 `src/Assets/Fonts/THIRD-PARTY-NOTICES.txt`。
+发布新版只更新程序，不会创建新的业务数据目录或覆盖现有事项。
