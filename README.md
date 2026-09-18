@@ -4,11 +4,11 @@ Perch Notes 是一款轻量、透明、离线的 Windows 桌面待办面板。�
 
 | 当前版本 | 更新时间 | 支持系统 |
 |---|---|---|
-| V2.67 | 2026-09-17 | Windows 10/11 x64 |
+| V2.76 | 2026-09-18 | Windows 10/11 x64 |
 
 ## 下载与运行
 
-[下载 Perch Notes V2.67 便携版](https://github.com/Ciel-H/Perch-Notes-/releases/latest)
+[下载 Perch Notes V2.76 便携版](https://github.com/Ciel-H/Perch-Notes-/releases/download/v2.76/Perch-Notes-v2.76-win-x64.zip)
 
 1. 下载并解压压缩包。
 2. 双击 `栖序便签.exe`，无需安装。
@@ -17,12 +17,13 @@ Perch Notes 是一款轻量、透明、离线的 Windows 桌面待办面板。�
 
 ## 功能介绍
 
-- **三级整理**：左侧为医院、诊所等类别；类别内建立 APP、HIS 等项目；项目下直接记录事项。
+- **三级整理**：用“类别 → 项目 → 事项”组织不同主题和任务，层级清晰。
 - **完成管理**：事项可勾选完成，完成后文字变淡、增加删除线并自动置底；“待完成 / 已完成”可随时切换。
 - **浮沉模式**：“浮”让面板始终位于所有应用上方；“沉”让面板保持在其他应用后方。
 - **顶部隐藏**：点击右上角收起按钮或把面板拖到屏幕顶部，即可收成紧贴屏幕顶边的窄条；触碰顶边后点击窄条恢复。
 - **外观设置**：支持跟随系统、暗黑、高级灰、亮白四种外观，透明度实时预览。
 - **字体设置**：内置 10 款中文字体，提供偏小、默认、偏大三档字号，无需安装系统字体。
+- **Deadline 提醒**：可为事项设置日期和时间，并按设置的提前时间显示持续提醒；关闭 Deadline 总开关后不会发送提醒。
 - **项目维护**：支持类别和项目折叠、排序、归档、恢复与回收站。
 - **本地保存**：自动保存、启动快照、每日备份、开机启动、单实例运行，不依赖账号或网络。
 
@@ -50,25 +51,9 @@ Perch Notes 是一款轻量、透明、离线的 Windows 桌面待办面板。�
 
 - 点击标题旁的 `···` 打开归档、回收站、设置和退出。
 - 外观、字体、字号和透明度修改后立即生效。
-- 数据文件位于 `%LOCALAPPDATA%\Qixu\data.json`。
-- 每日备份位于 `%LOCALAPPDATA%\Qixu\backups\`，保留最近 7 份。
+- 数据文件位于 `%USERPROFILE%\.qixu\data.json`。
+- 每日备份位于 `%USERPROFILE%\.qixu\backups\`，保留最近 7 份。
 - 每次启动前另外轮换保存最近 3 份快照，程序更新不会改写事项或完成状态。
 - 点击“退出”会完全结束程序；关闭显示可通过托盘再次唤出。
 
-## 分支说明
-
-- `main`：稳定版应用、版本信息与使用文档。
-- `dev`：完整源代码、内置字体资源、测试和打包脚本。
-
-## 开发与构建
-
-项目使用 .NET 10 WPF。安装 .NET 10 SDK 后执行：
-
-```powershell
-dotnet build CiciQian.slnx -c Release
-dotnet run --project tests/Qixu.Tests.csproj -c Release
-dotnet run --project qa-render/Qixu.Render.csproj -c Release
-.\build.ps1 -OutputName 栖序便签
-```
-
-发布新版只更新程序，不会创建新的业务数据目录或覆盖现有事项。内置字体的来源与授权说明位于 `src/Assets/Fonts/THIRD-PARTY-NOTICES.txt`。
+发布新版只更新程序，不会创建新的业务数据目录或覆盖现有事项。
